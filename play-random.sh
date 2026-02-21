@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-# Play a random .mp3 from the given directory, cross-platform.
+# Play a random sound (.mp3/.wav) from the given directory, cross-platform.
 # Usage: play-random.sh <directory>
 
 dir="$1"
 [[ -d "$dir" ]] || exit 0
 
 shopt -s nullglob globstar
-files=("$dir"/**/*.mp3)
+files=("$dir"/**/*.mp3 "$dir"/**/*.wav)
 [[ ${#files[@]} -gt 0 ]] || exit 0
 
 file="${files[RANDOM % ${#files[@]}]}"
