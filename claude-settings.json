@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/claude-sounds/play-random.sh ~/claude-sounds/stop/wc3"
+          }
+        ]
+      }
+    ],
+"Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/claude-sounds/play-random.sh ~/claude-sounds/notification/wc3"
+          }
+        ]
+      }
+    ]
+  }
+}
